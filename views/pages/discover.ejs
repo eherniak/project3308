@@ -1,0 +1,35 @@
+<%- include ('../partials/header') %>
+<%- include ('../partials/menu') %>
+
+<body class = "bg-dark">
+
+
+<div>
+  <br>
+
+
+<div class="card" style="width: 50rem;">
+<img class="card-img-top" src="<%= image%>" alt="Card image cap">
+  <div class="card-body">
+   <h5 class="card-title"><%= name%></h5>
+   <h6 class="card-subtitle mb-2 text-muted"><%= genre%></h6>
+   <h6 class="card-subtitle mb-2 text-muted"><%= year%></h6>
+   <p class="card-text"><%= bio%></p>
+  </div>
+</div>
+
+
+<form  action="/get_review" method="POST"  style="width: 50rem;">
+<div>
+<input class="form" type="search" name="review" placeholder="write your review" aria-label="Search">
+</div>
+<br>
+<div class="d-flex ">
+    <button class="btn btn-primary" type="submit">add review</button>
+    </div>
+</form>
+
+
+
+</body>
+<%- include ('../partials/footer') %>
